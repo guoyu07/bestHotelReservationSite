@@ -1,0 +1,708 @@
+@import "_fonts.scss";
+
+$main-clr : #1e3e79;
+$main-clr-2: #002456;
+$main-clr-light : #05c3f5;
+$main-clr-light-hvr : #cef5ff;
+$main-clr-diff: #ffb902;
+$primary-clr: #59595a;
+$border-clr:  #F3F3F3;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Proxima Nova Rg', Arial,sans-serif;
+  color: $primary-clr;
+  height: 100%;
+}
+
+.p-0 {
+  padding: 0;
+}
+.m-0{
+  margin: 0;
+}
+.m-l-10 {
+  margin-left: 10px;
+}
+.m-r-10 {
+  margin-right: 10px;
+}
+.t-a-c {
+  text-align: center;
+}
+.t-a-l {
+  text-align: left;
+}
+.t-a-r {
+  text-align: right;
+}
+.pos-r {
+  position: relative;
+}
+.v-a-m {
+  vertical-align: middle;
+}
+.w-120 {
+  width: 120px;
+}
+.w-300 {
+  width: 300px;
+}
+.d-i-b {
+  display: inline-block;
+}
+.clr {
+  clear: both;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Bold', Arial,sans-serif;
+}
+
+h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Semi', Arial,sans-serif;
+}
+.btn {
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Bold', Arial,sans-serif;
+  border-radius: 0;
+  transition: all 0.2s ease-in;
+}
+
+.btn-blue {
+  background: $main-clr-light;
+  color: $main-clr-2;
+  &:hover {
+    background-color: $main-clr-light-hvr;
+    transition: all 0.2s ease-in;
+  }
+}
+.btn-yellow {
+  background: $main-clr-diff;
+  color: white;
+  &:hover {
+    color: white;
+    background-color: #e3a605;
+    transition: all 0.2s ease-in;
+  }
+}
+input[type=email],
+input[type=text],
+input[type=password],
+textarea {
+  position: relative;
+  margin: 10px 0;
+  border: none;
+  padding: 2px 0;
+  font-size: 16px;
+  background: none;
+  border-bottom: solid 2px $main-clr-light;
+  transition: all .2s ease-in-out;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border-bottom-color: $main-clr-light-hvr;
+    & + .inp-label {
+      color: $main-clr-light-hvr;
+    }
+  }
+
+}
+
+.inp-cont {
+  display: inline-block;
+  .inp-label {
+    margin-top: -8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $main-clr-light;
+    transition: color .2s ease-in-out;
+  }
+  &.flex{
+    display: block;
+  }
+}
+
+.inp-counter {
+  display: inline-block;
+  .counter-cnt {
+    display: inline-block;
+    .main-val {
+      color: white;
+      font-size: 22px;
+      font-family: 'Proxima Nova Bold', Arial,sans-serif;
+    }
+    .inp-counter-label {
+      color: $main-clr-light;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-top: -8px;
+    }
+  }
+  .icons {
+    display: inline-block;
+    span {
+      color: white;
+      font-size: 16px;
+    }
+  }
+}
+
+.info-label {
+  label {
+    color: $main-clr-light;
+    font-family: 'Proxima Nova Semi', Arial,sans-serif;
+    font-size: 12px;
+    margin: 0;
+  }
+  div {
+    margin-top: -5px;
+  }
+}
+header {
+  padding: 5px 15px;
+  .logo {
+    font-family: 'Proxima Nova Bl', Arial,sans-serif;
+    float: left;
+    font-size: 22px;
+    padding: 5px 0;
+    cursor: pointer;
+    span {
+      color: $main-clr-light;
+    }
+  }
+  .links {
+    padding: 10px 0;
+    font-size: 16px;
+    float: right;
+    .head-link {
+      display: inline;
+      margin: 0 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover {
+        color: $main-clr-light;
+      }
+    }
+  }
+}
+
+.besthotel {
+  .content {
+    .cover {
+      position: relative;
+      .text-help {
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: white;
+        span {
+          color: $main-clr-diff;
+        }
+      }
+      img {
+        width: 100%;
+      }
+      .search-box {
+        input[type="text"] {
+          color: white;
+        }
+        position: absolute;
+        bottom: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        .main-info {
+          padding: 8px 15px 15px;
+          background: rgba(0,36,86,0.9);
+          .inp-cont:nth-child(2) {
+            margin: 0 30px;
+          }
+        }
+        .sub-info {
+          display: flex;
+          background: rgba(0,36,86,0.7);
+          .inp-counter {
+            padding: 15px;
+            flex: 1;
+          }
+          .inp-counter:nth-child(2) {
+            margin: 0 20px;
+          }
+          .btn {
+            flex: 1;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .download-app {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &.search {
+    .cover {
+      position: relative;
+      .text-help {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: white;
+        span {
+          color: $main-clr-diff;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .search-cont {
+      display: flex;
+      .filters {
+        padding: 20px;
+        width: 26%;
+        display: inline-block;
+        .search-box {
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+          .dest {
+            width: 100%;
+            input {
+              width: 100%;
+            }
+          }
+          .date-cont {
+            display: flex;
+            .date {
+              width: 48%;
+              input {
+                width: 100%;
+              }
+            }
+          }
+
+          input[type="text"] {
+            color: white;
+          }
+          .main-info {
+            padding: 8px 15px 15px;
+            background: rgba(0,36,86,0.9);
+          }
+          .sub-info {
+            display: flex;
+            background: rgba(0,36,86,0.7);
+            .inp-counter {
+              padding: 15px;
+              flex: 1;
+            }
+          }
+          .btn {
+            width: 100%;
+            height: 50px;
+          }
+        }
+        .filter-options {
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+          background: rgba(0,36,86,0.7);
+          padding: 1px 15px 15px;
+          margin: 20px 0;
+          h3 {
+            font-family: 'Proxima Nova Bold', Arial,sans-serif;
+            color: white;
+            text-align: center;
+          }
+          form {
+            width: 100%;
+          }
+          .filter-icons {
+            margin-top: 70px;
+            .icon {
+              text-align: center;
+              color: $main-clr;
+              margin-right: 10px;
+              &.selected {
+                color: $main-clr-diff;
+                .icon-label {
+                  color: $main-clr-diff;
+                }
+              }
+              span {
+                font-size: 20px;
+              }
+              .icon-label {
+                color: $main-clr;
+              }
+            }
+          }
+        }
+      }
+      .results {
+        width: 74%;
+        display: inline-block;
+        padding: 20px 20px 20px 0px;
+        .search-card {
+          margin-bottom: 20px;
+          box-shadow: 0 8px 15px rgba(0,0,0,0.1), 0 3px 3px rgba(0,0,0,0.15);
+          transition: all 0.15s ease-in;
+          &:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 5px 5px rgba(0,0,0,0.20);
+          }
+          a {
+            display: block;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+  &.hotel {
+    .cover {
+      position: relative;
+      .text-help {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: white;
+        span {
+          color: $main-clr-diff;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .search-cont {
+      display: flex;
+      .filters {
+        position: relative;
+        padding: 20px;
+        width: 26%;
+        display: inline-block;
+        .search-box {
+          position: absolute;
+          top: -12%;
+          margin-right: 20px;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+          .dest {
+            width: 100%;
+            input {
+              width: 100%;
+            }
+          }
+          .date-cont {
+            display: flex;
+            .date {
+              width: 48%;
+              input {
+                width: 100%;
+              }
+            }
+          }
+
+          input[type="text"] {
+            color: white;
+          }
+          .main-info {
+            padding: 8px 15px 15px;
+            background: rgba(0,36,86,0.9);
+          }
+          .sub-info {
+            display: flex;
+            background: rgba(0,36,86,0.7);
+            .inp-counter {
+              padding: 15px;
+              flex: 1;
+            }
+          }
+          .btn {
+            width: 100%;
+            height: 50px;
+          }
+        }
+        .filter-options {
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+          background: rgba(0,36,86,0.7);
+          margin: 20px 0;
+          margin-top: 125px;
+          text-align: center;
+          padding-top: 1px;
+          h1 {
+            font-family: 'Proxima Nova Bold', Arial,sans-serif;
+            text-align: center;
+            color: $main-clr-diff;
+          }
+          .days {
+            text-transform: uppercase;
+            color: white;
+            margin-top: -8px;
+            font-family: 'Proxima Nova Semi', Arial,sans-serif;
+          }
+          .btn {
+            width: 100%;
+            height: 48px;
+            font-size: 18px;
+            margin-top: 14px;
+          }
+        }
+      }
+      .results {
+        width: 74%;
+        display: inline-block;
+        padding: 0;
+        margin-top: -1px;
+        .head {
+          display: flex;
+          justify-content: space-between;
+          .title {
+            h1 {
+              font-family: 'Proxima Nova Bold', Arial,sans-serif;
+              text-transform: uppercase;
+              font-size: 28px;
+            }
+            h4 {
+              text-transform: uppercase;
+              color: $main-clr-diff;
+              font-family: 'Proxima Nova Semi', Arial,sans-serif;
+            }
+          }
+          .rating {
+            width: 11%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        .slider {
+          img {
+            width: 100%;
+          }
+        }
+
+        .desc {
+          font-size: 18px;
+          margin: 20px 0;
+        }
+
+        .amenities {
+          h2 {
+            font-family: 'Proxima Nova Bold', Arial,sans-serif;
+            text-transform: uppercase;
+            font-size: 26px;
+          }
+          .icons {
+            .icon {
+              text-align: center;
+              color: $main-clr;
+              margin-right: 10px;
+              margin-right: 5%;
+              span {
+                font-size: 30px;
+              }
+              .icon-label {
+                color: $main-clr;
+              }
+            }
+          }
+        }
+
+        .reviews {
+          h2 {
+            font-family: 'Proxima Nova Bold', Arial,sans-serif;
+            text-transform: uppercase;
+            font-size: 26px;
+          }
+          .review-cont {
+            padding-right: 20px;
+            margin-bottom: 50px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.store-s-cover {
+  height: 100vh;
+  background-image: url(../img/store.jpg) ;
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  background-color: #999;
+}
+
+.summery {
+  .register-cover {
+    @extend .store-s-cover;
+    background-image: url(../img/paris1.jpg);
+
+  }
+
+  .register-panel {
+    position: absolute;
+    width: 700px;
+    height: 420px;
+    top: 50%;
+    margin-top: -210px;
+    left: 50%;
+    margin-left: -350px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    .signup-right{
+      height: 420px;
+      background: url('../img/room-l.jpg');
+      background-size: cover;
+      .head-desc {
+        position: absolute;
+        color: white;
+        font-size: 24px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: Center;
+        line-height: 1.5;
+        span {
+          color: $main-clr-diff;
+        }
+      }
+    }
+    .signup-left {
+      padding-right: 20px;
+      h2 {
+        font-family: 'Proxima Nova Bold', Arial,sans-serif;
+        text-transform: uppercase;
+        font-size: 26px;
+        color: $main-clr-2;
+      }
+      .btn {
+        width: 100%;
+        height: 45px;
+        font-size: 18px;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.register {
+  .register-cover {
+    @extend .store-s-cover;
+    background-image: url(../img/amster.jpg);
+  }
+
+  .register-panel {
+    position: absolute;
+    top: 50%;
+    transform: translate(-130%, -50%);
+    left: 50%;
+    background: rgba(0,36,86,0.9);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    padding: 20px;
+    width: 25%;
+
+    .signup-left {
+      input {
+        width: 100%;
+        color: white;
+      }
+      h2 {
+        font-family: 'Proxima Nova Bold', Arial,sans-serif;
+        text-transform: uppercase;
+        color: white;
+        font-size: 26px;
+      }
+      .btn {
+        width: 100%;
+        height: 45px;
+        font-size: 18px;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .liner-desc {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-family: 'Proxima Nova Bold', Arial,sans-serif;
+    right: 20%;
+    color: white;
+    span {
+      color: $main-clr-diff;
+    }
+  }
+}
+
+footer {
+  background-color: $main-clr;
+  textarea {
+    margin: 4px 0;
+    color: white;
+  }
+  input[type="text"] {
+    color: white;
+  }
+  .footer-cont {
+    display: flex;
+    .section {
+      color: white;
+      flex: 1;
+      padding: 15px;
+      .sent {
+        img {
+          width: 40px;
+          margin-left: 12px;
+          margin-top: -42px;
+        }
+      }
+      &.links {
+        text-align: center;
+        color: white;
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: $main-clr-light;
+          }
+        }
+      }
+      &.findus {
+        color: white;
+        text-align: center;
+        a:nth-child(2) {
+          margin: 0 30px;
+        }
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+  .disclaim {
+    text-align: center;
+    padding: 8px;
+    border-top: 1px solid #4e648c;
+    text-transform: uppercase;
+    color: white;
+  }
+}
